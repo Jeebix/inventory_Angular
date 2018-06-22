@@ -1,0 +1,61 @@
+<h2>Saisie produit suivi en stock :</h2>
+<form>
+	<div class="form-group">
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input" name="entry-type" value="tracked" checked="checked" /> Suivi en stock
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input" name="entry-type" value="non-tracked" /> Non-suivi en stock
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-2 has-danger" id="add-loc">
+			<label for="location" class="form-control-label col-form-label-sm">Emplacement</label>
+			<input type="text" class="form-control form-control-sm" id="location" name="location" placeholder="emplacement" />
+			<small class="form-control-feedback">Success! You've done it.</small>
+		</div>
+		<div class="form-group col-md-2" id="add-ref">
+			<label for="reference" class="form-control-label col-form-label-sm">Référence</label>
+			<input type="text" class="form-control form-control-sm" id="reference" name="reference" placeholder="référence" />
+			<span class="help-block" id="help-ref"></span>
+		</div>
+		<div class="form-group col-md-8" id="add-des">
+			<label for="designation" class="form-control-label col-form-label-sm">Désignation</label>
+			<input type="text" class="form-control form-control-sm" id="designation" name="designation" placeholder="désignation" />
+			<span class="help-block" id="help-des"></span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-2" id="add-qty">
+			<label for="quantity" class="form-control-label col-form-label-sm">Quantité</label>
+			<input type="text" class="form-control form-control-sm" id="quantity" name="quantity" placeholder="quantité" />
+			<span class="help-block" id="help-qty"></span>
+		</div>
+		<div class="form-group col-md-2">
+			<label for="statut" class="form-control-label col-form-label-sm">Statut</label>
+			<select class="form-control form-control-sm" id="status" name="status">
+				<optgroup label="Statut">
+					<option selected>A</option>
+					<option>Q</option>
+					<option>R</option>
+				</optgroup>
+			</select>
+		</div>
+		<div class="form-group col-md-8">
+			<label for="comment" class="form-control-label col-form-label-sm">Commentaire</label>
+			<input type="text" class="form-control form-control-sm" id="comment" name="comment" placeholder="commentaire" />
+		</div>
+	</div>
+	<div class="form-group col">
+		<button type="submit" class="row btn btn-outline-warning btn-sm float-right" id="add-button">
+			<i class="fas fa-check"></i> Ajouter
+		</button>
+	</div>
+	<p id="input-help-block" class="form-text text-muted"></p>
+</form>
+
+<init-entry-table></init-entry-table>
